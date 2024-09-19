@@ -6,6 +6,7 @@ import {
   AiOutlineLogin,
   AiOutlineUserAdd,
   AiOutlineShoppingCart,
+  AiOutlineLogout,
 } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -75,6 +76,32 @@ function Navigation() {
           <span className="hidden nav-item-name mt-[3rem]">FAVOURITE</span>{" "}
         </Link>
       </div>
+
+      <ul>
+        <li>
+          <Link
+            to="/login"
+            className="flex items-center transition-transform 
+          transform hover:translate-x-2"
+          >
+            <AiOutlineLogin className="mr-2 mt-[3rem]" size={26} />
+            <span className="hidden nav-item-name mt-[3rem]">LOGIN</span>{" "}
+          </Link>
+
+          <li>
+            <Link
+              to="/register"
+              className="flex items-center transition-transform 
+          transform hover:translate-x-2"
+            >
+              <AiOutlineUserAdd className="mr-2 mt-[3rem]" size={26} />
+              <span className="hidden nav-item-name mt-[3rem]">
+                REGISTER
+              </span>{" "}
+            </Link>
+          </li>
+        </li>
+      </ul>
     </div>
   );
 }
