@@ -16,7 +16,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useLoginMutation } from "../../redux/api/usersApiSlice.js";
 import { logOut } from "../../redux/features/auth/authSlice.js";
 
-function Navigation() {
+const Navigation = () => {
   const { userInfo } = useSelector((state) => state.auth);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
@@ -51,15 +51,15 @@ function Navigation() {
       style={{ zIndex: 999 }}
       className={`${
         showSidebar ? "hidden" : "flex"
-      } xl:flex lg:flex md:hidden sm:hidden 
-      flex-col justify-between p-4 text-white bg-black 
+      } xl:flex lg:flex md:hidden sm:hidden
+      flex-col justify-between p-4 text-white bg-black
       w-[4%] hover:w-[15%] h-[100vh] fixed`}
       id="navigation-container"
     >
       <div className="flex flex-col justify-center space-y-4">
         <Link
           to="/"
-          className="flex items-center transition-transform 
+          className="flex items-center transition-transform
           transform hover:translate-x-2"
         >
           <AiOutlineHome className="mr-2 mt-[3rem]" size={26} />
@@ -68,7 +68,7 @@ function Navigation() {
 
         <Link
           to="/shop"
-          className="flex items-center transition-transform 
+          className="flex items-center transition-transform
           transform hover:translate-x-2"
         >
           <AiOutlineShopping className="mr-2 mt-[3rem]" size={26} />
@@ -77,7 +77,7 @@ function Navigation() {
 
         <Link
           to="/cart"
-          className="flex items-center transition-transform 
+          className="flex items-center transition-transform
           transform hover:translate-x-2"
         >
           <AiOutlineShoppingCart className="mr-2 mt-[3rem]" size={26} />
@@ -86,7 +86,7 @@ function Navigation() {
 
         <Link
           to="/favourite"
-          className="flex items-center transition-transform 
+          className="flex items-center transition-transform
           transform hover:translate-x-2"
         >
           <FaHeart className="mr-2 mt-[3rem]" size={26} />
@@ -94,7 +94,7 @@ function Navigation() {
         </Link>
       </div>
 
-      <div className="relative">
+      <div className="realtive">
         <button
           onClick={toogleDropdown}
           className="flex items-center text-gray-8000 focus:outline-none"
@@ -111,29 +111,28 @@ function Navigation() {
         <li>
           <Link
             to="/login"
-            className="flex items-center transition-transform 
-          transform hover:translate-x-2"
+            className="flex items-center transition-transform
+            transform hover:translate-x-2"
           >
             <AiOutlineLogin className="mr-2 mt-[3rem]" size={26} />
             <span className="hidden nav-item-name mt-[3rem]">LOGIN</span>{" "}
           </Link>
-
-          <li>
-            <Link
-              to="/register"
-              className="flex items-center transition-transform 
-          transform hover:translate-x-2"
-            >
-              <AiOutlineUserAdd className="mr-2 mt-[3rem]" size={26} />
-              <span className="hidden nav-item-name mt-[3rem]">
-                REGISTER
-              </span>{" "}
-            </Link>
-          </li>
+        </li>
+        <li>
+          <Link
+            to="/register"
+            className="flex items-center transition-transform
+            transform hover:translate-x-2"
+          >
+            <AiOutlineUserAdd className="mr-2 mt-[3rem]" size={26} />
+            <span className="hidden nav-item-name mt-[3rem]">
+              REGISTER
+            </span>{" "}
+          </Link>
         </li>
       </ul>
     </div>
   );
-}
+};
 
 export default Navigation;
