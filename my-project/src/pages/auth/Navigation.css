@@ -1,3 +1,9 @@
+body {
+  background-color: rgba(0, 0, 0, 0.95); /* Black with 50% opacity */
+  margin: 0;
+  padding: 0;
+}
+
 #navigation-container {
   width: 4%;
   transition: width 0.3s ease-in-out;

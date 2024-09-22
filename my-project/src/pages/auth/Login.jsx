@@ -31,12 +31,12 @@ const Login = () => {
     <div>
       <section className="pl-[10rem] flex flex-wrap">
         <div className="mr-[4rem] mt-[5rem]">
-          <h1 className="text-2xl font-semibold mb-4">Sign In</h1>
+          <h1 className="text-2xl text-white font-semibold mb-4">Sign In</h1>
           <form className="container w-[40rem]">
             <div className="my-[2rem]">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-black"
+                className="block text-sm font-medium text-white"
               >
                 Email Address
               </label>
@@ -76,7 +76,7 @@ const Login = () => {
             {isLoading && <Loader />}
           </form>
           <div className="mt-4">
-            <p className="text-black">
+            <p className="text-white">
               New Customer ?{" "}
               <Link
                 to={redirect ? `/register?redirect=${redirect}` : "register"}
