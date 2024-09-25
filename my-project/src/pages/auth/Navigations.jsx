@@ -124,16 +124,17 @@ const Navigation = () => {
 
         {dropdownOpen && userInfo && (
           <ul
-            className={`absolute right-0 mt-2 mr-14 space-y-2 bg-white text-gray-600 ${
+            className={`absolute right-0 mt-2 mr-14  bg-white text-gray-600 cursor-pointer ${
               !userInfo.isAdmin ? "-top-20" : "-top-80"
             } `}
+            onMouseLeave={() => setDropdownOpen(false)}
           >
             {userInfo.isAdmin && (
               <>
                 <li>
                   <Link
                     to="/admin/dashboard"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Dashboard
                   </Link>
@@ -141,7 +142,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/productlist"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Products
                   </Link>
@@ -149,7 +150,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/categorylist"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Category
                   </Link>
@@ -157,7 +158,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/orderlist"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Orders
                   </Link>
@@ -165,7 +166,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/userlist"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Users
                   </Link>
@@ -174,22 +175,18 @@ const Navigation = () => {
             )}
 
             <li>
-              <button onMouseLeave={() => setDropdownOpen(false)}>
-                <Link
-                  to="/profile"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Profile
-                </Link>
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={logoutHandler}
-                className="block w-full px-4 py-2 text-left hover:bg-gray-100"
+              <Link
+                to="/profile"
+                className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
               >
-                Logout
-              </button>
+                Profile
+              </Link>
+            </li>
+            <li
+              onClick={logoutHandler}
+              className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black "
+            >
+              Logout
             </li>
           </ul>
         )}

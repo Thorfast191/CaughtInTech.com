@@ -2,6 +2,7 @@ body {
   background-color: rgba(0, 0, 0, 0.95); /* Black with 50% opacity */
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 #navigation-container {
