@@ -124,7 +124,7 @@ const Navigation = () => {
 
         {dropdownOpen && userInfo && (
           <ul
-            className={`absolute right-0 mt-2 mr-14  bg-white text-gray-600 cursor-pointer ${
+            className={`absolute right-0 mt-2 mr-14 bg-pink-500 text-gray-600 cursor-pointer rounded-lg ${
               !userInfo.isAdmin ? "-top-20" : "-top-80"
             } `}
             onMouseLeave={() => setDropdownOpen(false)}
@@ -177,14 +177,14 @@ const Navigation = () => {
             <li>
               <Link
                 to="/profile"
-                className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
+                className="block bg-pink-500 text-white rounded px-4 py-2 hover:bg-gray-100 hover:text-black"
               >
                 Profile
               </Link>
             </li>
             <li
               onClick={logoutHandler}
-              className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black "
+              className="block bg-pink-500 text-white px-4 py-2 hover:bg-gray-100 hover:text-black"
             >
               Logout
             </li>
