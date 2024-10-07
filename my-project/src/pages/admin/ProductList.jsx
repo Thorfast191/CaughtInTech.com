@@ -26,6 +26,11 @@ const ProductList = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Check if category is selected
+    if (!category) {
+      toast.error("Please select a category.");
+      return;
+    }
 
     try {
       const productData = new FormData();
@@ -167,6 +172,9 @@ const ProductList = () => {
                   className="p-4 mb-3 w-[30rem] border rounded-lg bg-[#101011] text-white"
                   onChange={(e) => setCategory(e.target.value)}
                 >
+                  <option value="" disabled selected>
+                    Choose a category
+                  </option>
                   {categories?.map((c) => (
                     <option key={c._id} value={c._id}>
                       {c.name}
