@@ -124,7 +124,7 @@ const Navigation = () => {
 
         {dropdownOpen && userInfo && (
           <ul
-            className={`absolute right-0 mt-2 mr-14 bg-pink-500 text-gray-600 cursor-pointer rounded-lg ${
+            className={`absolute right-0 mt-2 mr-14 bg-[#101011] text-white cursor-pointer rounded-lg ${
               !userInfo.isAdmin ? "-top-20" : "-top-80"
             } `}
             onMouseLeave={() => setDropdownOpen(false)}
@@ -134,7 +134,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/dashboard"
-                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
+                    className="block bg-[#101011] text-white rounded-lg px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Dashboard
                   </Link>
@@ -142,7 +142,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/productlist"
-                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
+                    className="block bg-[#101011] text-white rounded-lg px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Products
                   </Link>
@@ -150,7 +150,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/categorylist"
-                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
+                    className="block bg-[#101011] text-white rounded-lg px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Category
                   </Link>
@@ -158,7 +158,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/orderlist"
-                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
+                    className="block bg-[#101011] text-white rounded-lg px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Orders
                   </Link>
@@ -166,7 +166,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/userlist"
-                    className="block bg-pink-500 text-white  px-4 py-2 hover:bg-gray-100 hover:text-black"
+                    className="block bg-[#101011] text-white rounded-lg px-4 py-2 hover:bg-gray-100 hover:text-black"
                   >
                     Users
                   </Link>
@@ -177,14 +177,14 @@ const Navigation = () => {
             <li>
               <Link
                 to="/profile"
-                className="block bg-pink-500 text-white rounded px-4 py-2 hover:bg-gray-100 hover:text-black"
+                className="block bg-[#101011] text-white rounded-lg px-4 py-2 hover:bg-gray-100 hover:text-black"
               >
                 Profile
               </Link>
             </li>
             <li
               onClick={logoutHandler}
-              className="block bg-pink-500 text-white px-4 py-2 hover:bg-gray-100 hover:text-black"
+              className="block bg-[#101011] text-white rounded-lg px-4 py-2 hover:bg-gray-100 hover:text-black"
             >
               Logout
             </li>
